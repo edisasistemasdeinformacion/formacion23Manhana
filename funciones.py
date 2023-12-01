@@ -1,9 +1,5 @@
 def fibonacci(n):
     fib_array = [0, 1]
-
-    for i in range(2, n):
-        fib_array.append(fib_array[-1] + fib_array[-2])
-
     return fib_array
 
 
@@ -25,9 +21,6 @@ def floyd_warshall(graph):
     for i in range(num_nodes):
         for j in range(num_nodes):
             if i == j:
-                dist[i][j] = 0
-            else:
-                dist[i][j] = graph[i][j]
 
     # Calcular distancias mínimas.
     for k in range(num_nodes):
